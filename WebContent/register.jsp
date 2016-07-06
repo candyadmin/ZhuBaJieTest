@@ -1,3 +1,10 @@
+<%@ page language="java" contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%
+request.setCharacterEncoding("UTF-8") ;
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -67,7 +74,7 @@
   </div>
   
   </form>
-  <div class="reg">已有账号？<a href="login.html">登录</a></div>
+  <div class="reg">已有账号？<a href="login.jsp">登录</a></div>
   </div>
 
 </div>

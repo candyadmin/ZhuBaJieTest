@@ -40,7 +40,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                             <a href="${pageContext.request.contextPath}/login.jsp">登录</a>
                         </li>
                         <li>
-                            <a href="#work">免费注册</a>
+                            <a href="${pageContext.request.contextPath}/register.jsp">免费注册</a>
                         </li>
                         <li>
                             <a href="#clients">我的订单</a>

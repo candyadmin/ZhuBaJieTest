@@ -58,7 +58,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </div>
   
   </form>
-  <div class="reg"><a href="Register.html">注册新账号</a></div>
+  <div class="reg"><a href="register.jsp">注册新账号</a></div>
   </div>
 
 </div>
