@@ -17,7 +17,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <script type='text/javascript' src='Script/jquery-1.11.1.min.js'></script>
     <script src="Script/common.js"></script>
 </head>
-
 <body>
     <div id="navbar-top" style="height:55px;">
         <nav class="navbar navbar-default navbar-static" role="navigation">
@@ -38,7 +37,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                             <a href="#home">首页</a>
                         </li>
                         <li>
-                            <a href="#services">登录</a>
+                            <a href="${pageContext.request.contextPath}/login.jsp">登录</a>
                         </li>
                         <li>
                             <a href="#work">免费注册</a>
