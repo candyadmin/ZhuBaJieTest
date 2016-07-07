@@ -1,7 +1,10 @@
 package web;
 
 import java.io.IOException;
+import java.net.URLEncoder;
+
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,7 +23,6 @@ public class loginServlet extends HttpServlet {
 		UserService service = BasicFactory.getFactory().getService(UserService.class);
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		System.out.println(username+"::"+password);
 		User user = service.getUserByNameAndPsw(username,password);
 		if(user == null){
 			request.setAttribute("msg", "用户名密码错误");
@@ -28,6 +30,10 @@ public class loginServlet extends HttpServlet {
 			return;
 		}else{
 			request.getSession().setAttribute("user", user);
+			Cookie autologinC = new Cookie("autologin",URLEncoder.encode(user.getUser_username()+":"+user.getUser_password(),"utf-8"));
+			autologinC.setPath("/");
+			autologinC.setMaxAge(3600*24*30);
+			response.addCookie(autologinC);
 		}
 		response.sendRedirect(request.getContextPath()+"/index.jsp");
 	}

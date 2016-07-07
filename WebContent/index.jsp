@@ -36,21 +36,32 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         <li class="active">
                             <a href="#home">首页</a>
                         </li>
-                        <li>
-                            <a href="${pageContext.request.contextPath}/login.jsp">登录</a>
-                        </li>
-                        <li>
-                            <a href="${pageContext.request.contextPath}/register.jsp">免费注册</a>
-                        </li>
-                        <li>
-                            <a href="#clients">我的订单</a>
-                        </li>
-                        <li>
-                            <a href="#about">我是雇主</a>
-                        </li>
-                        <li>
-                            <a href="#contact">我是服务商</a>
-                        </li>
+                        <c:if test="${sessionScope.user==null }">
+	                        <li>
+	                            <a href="${pageContext.request.contextPath}/login.jsp">登录</a>
+	                        </li>
+	                        <li>
+	                            <a href="${pageContext.request.contextPath}/register.jsp">免费注册</a>
+	                        </li>
+	                        <li>
+	                            <a href="#about">我是雇主</a>
+	                        </li>
+	                        <li>
+	                            <a href="#contact">我是服务商</a>
+	                        </li>
+						</c:if>
+                         <c:if test="${sessionScope.user!=null }">
+                        	 <li>
+	                            <a>${sessionScope.user.user_username }</a>
+	                      	 </li>
+	                         <li>
+	                            <a href="#clients">我的订单</a>
+	                        </li>
+	                         <li>
+	                            <a href="${pageContext.request.contextPath}/logoutServlet">退出登录</a>
+	                        </li>
+                        </c:if>
+                        
                     </ul>
                 </div>
             </div>
