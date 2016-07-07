@@ -50,7 +50,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	   <input type="password" name="password" id="password" class="form-control" placeholder="密码" data-bv-trigger="keyup" required>    
        </div>
   </div>
-  
+  <div>
+  	<a style="color:yellow;">
+  		${requestScope.msg}
+  	</a>
+  </div>
   
   <div style=" margin-top:40px;">
 	   <label for="logonId" class="form-label"></label>
