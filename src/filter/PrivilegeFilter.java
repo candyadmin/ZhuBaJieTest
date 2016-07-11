@@ -53,7 +53,6 @@ public class PrivilegeFilter implements Filter {
 			while((line=adminReader.readLine())!=null){
 				admin_list.add(line);
 			}
-			
 			BufferedReader userReader = new BufferedReader(new FileReader(context.getRealPath("WEB-INF/user.txt")));
 			line = null;
 			while((line=userReader.readLine())!=null){
