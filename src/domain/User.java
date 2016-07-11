@@ -7,6 +7,13 @@ public class User {
 	private int user_idcard;
 	private String user_realname;
 	private String user_major;
+	private String user_role;
+	public String getUser_role() {
+		return user_role;
+	}
+	public void setUser_role(String user_role) {
+		this.user_role = user_role;
+	}
 	public int getUser_id() {
 		return user_id;
 	}
