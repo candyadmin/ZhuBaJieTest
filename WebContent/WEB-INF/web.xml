@@ -47,4 +47,14 @@
     <servlet-name>logoutServlet</servlet-name>
     <url-pattern>/logoutServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>subObjServlet</display-name>
+    <servlet-name>subObjServlet</servlet-name>
+    <servlet-class>web.subObjServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>subObjServlet</servlet-name>
+    <url-pattern>/subObjServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

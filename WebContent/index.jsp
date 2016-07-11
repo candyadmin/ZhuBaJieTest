@@ -91,7 +91,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 
             </div>  
             <div id="searchright">
-                <input class="pub" value="我要发布需求" type="button" />
+               <a href="${pageContext.request.contextPath}/subObjServlet"><input class="pub" value="我要发布需求" type="button" /></a>
             </div>  
         </div>
 
