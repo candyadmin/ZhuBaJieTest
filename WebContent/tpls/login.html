@@ -1,0 +1,54 @@
+<div class="header">
+    <div class="headerLogo"><img alt="logo" src="images/logo1.png"></div>
+    <h2>欢迎登录</h2>
+</div>
+
+<div class="banner">
+
+    <div class="login-aside">
+        <div id="o-box-up"></div>
+        <div id="o-box-down" style="table-layout:fixed;">
+            <form name="vform" novalidate>
+                <div class="form-group">
+                    <label for="logonId" class="form-label">平台账号登录：</label>
+                    <div>
+                        <input type="text" name="logname" class="form-control" placeholder="手机号码" data-bv-trigger="keyup" ng-model="vm.logname" required>
+                        <span class="error" ng-show="vform.logname.$dirty && vform.logname.$invalid">
+                            <span ng-show="vform.logname.$error.required">请输入手机号码</span>
+                        </span>
+                    </div>
+
+                    <div class="ui-form-explain"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="logonId" class="form-label">登陆密码：</label>
+                    <div>
+                        <input type="password" name="pwd" class="form-control" placeholder="密码" data-bv-trigger="keyup" ng-model="vm.pwd" required>
+                        <span class="error" ng-show="vform.pwd.$dirty && vform.pwd.$invalid">
+                            <span ng-show="vform.pwd.$error.required">请输入密码</span>
+                        </span>
+                    </div>
+                </div>
+
+
+                <div style="margin-top:40px;">
+                    <label for="logonId" class="form-label"></label>
+                    <input type="submit" value="登    录" class="btn btn-primary subbtn" ng-disabled="vform.logname.$dirty || vform.pwd.$dirty" ng-click="vm.logon()">
+                </div>
+
+            </form>
+            <div class="reg"><a ui-sref='register'>注册新账号</a></div>
+        </div>
+
+    </div>
+
+    <div class="bd">
+        <ul>
+            <li style="background:url(images/loginbg.jpg) #CCE1F3 center 0 no-repeat;"></li>
+
+        </ul>
+    </div>
+
+</div>
+<div class="banner-shadow"></div>
