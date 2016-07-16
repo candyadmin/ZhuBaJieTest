@@ -7,16 +7,16 @@ engineer.controller("loginCtrl", ["$scope", "$http", function ($scope, $http) {
         pwd:"111"
     };
     vm.logon = function () {
-        $http.post('', {
-            name: vm.logname,
-            pwd:vm.pwd
-        }).success(function(result){
-           
-        })
-    }
+        $http.post(
+        		'loginServlet',
+        		{	
+        			name:vm.logname,
+        			pwd:vm.pwd
+        		}
+        	).success(function(result){
+        	})
+}
     
 }]);
-
 engineer.controller("registerCtrl", ["$scope", "$http", function ($scope, $http) {
-    
 }]);
