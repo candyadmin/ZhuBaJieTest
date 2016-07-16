@@ -22,6 +22,7 @@ public class loginServlet extends HttpServlet {
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println(request.getParameter("name"));
+		System.out.println(request.getParameter("pwd"));
 		// UserService service =
 		// BasicFactory.getFactory().getService(UserService.class);
 		// User user = service.getUserByNameAndPsw(username,password);
