@@ -1,0 +1,28 @@
+﻿[
+  {
+    "ProjectClassID": 1,
+    "ProjectClassName": "生物制药类"
+  },
+  {
+    "ProjectClassID": 2,
+    "ProjectClassName": "机械加工类"
+  },
+  {
+    "ProjectClassID": 3,
+    "ProjectClassName": "电子类"
+  },
+  {
+    "ProjectClassID": 4,
+    "ProjectClassName": "新能源"
+  },
+  {
+    "ProjectClassID": 5,
+    "ProjectClassName": "新材料"
+  },
+  {
+    "ProjectClassID": 6,
+    "ProjectClassName": "化工类"
+  }
+
+]
+

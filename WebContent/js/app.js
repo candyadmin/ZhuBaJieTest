@@ -16,19 +16,19 @@ engineerApp.config(function($stateProvider,$urlRouterProvider){
 	    	url:'/home',
 	    	views: {
 	    		'': {
-	    		    templateUrl: 'tpls/home.html',
+	    		    templateUrl: 'views/home.html',
 	    		},
 	    		'top@home':{
-	    			templateUrl:'tpls/top.html'
+	    		    templateUrl: 'layout/top.html'
 	    		},
 	    		'search@home':{
-	    			templateUrl:'tpls/search.html'
+	    		    templateUrl: 'layout/search.html'
 	    		},
 	    		'main@home':{
-	    			templateUrl:'tpls/default.html'
+	    		    templateUrl: 'views/default.html'
 	    		},
 	    		'foot@home':{
-	    			templateUrl:'tpls/foot.html'
+	    		    templateUrl: 'layout/foot.html'
 	    		}
 	    	}
 	    })
@@ -36,7 +36,7 @@ engineerApp.config(function($stateProvider,$urlRouterProvider){
 	    	url: '/login',
 	    	views: {
 	    		'': {
-	    		    templateUrl: 'tpls/login.html',
+	    		    templateUrl: 'views/login.html',
 	    		    controller: 'loginCtrl'
 	    		}
 	    	}
@@ -45,9 +45,30 @@ engineerApp.config(function($stateProvider,$urlRouterProvider){
 	    	url: '/register',
 	    	views: {
 	    		'': {
-	    			templateUrl: 'tpls/register.html'
+	    		    templateUrl: 'views/register.html',
+	    		    controller: 'registerCtrl'
 	    		}
 	    	}
 	    })
+
+        .state('home.projectPub', {
+            url: '/projectPub',
+            views: {
+                'main@home': {
+                    templateUrl: 'views/ProjectPub.html',
+                    controller: 'projectPubCtrl'
+                }
+            }
+        })
+        
+        .state('home.projects', {
+            url: '/projects',
+            views: {
+                'main@home': {
+                    templateUrl: 'views/project/projects.html',
+                    controller:'projectsCtrl'
+                }
+            }
+        })
 
 });

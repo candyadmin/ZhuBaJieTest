@@ -8,6 +8,7 @@
     <div class="login-aside">
         <div id="o-box-up"></div>
         <div id="o-box-down" style="table-layout:fixed;">
+
             <form name="vform" novalidate>
                 <div class="form-group">
                     <label for="logonId" class="form-label">平台账号登录：</label>
@@ -34,7 +35,7 @@
 
                 <div style="margin-top:40px;">
                     <label for="logonId" class="form-label"></label>
-                    <input type="submit" value="登    录" class="btn btn-primary subbtn" ng-disabled="vform.logname.$dirty || vform.pwd.$dirty" ng-click="vm.logon()">
+                    <input type="submit" value="登    录" class="btn btn-primary subbtn" ng-disabled="vform.logname.$dirty && vform.logname.$invalid || vform.pwd.$dirty && vform.pwd.$invalid" ng-click="vm.logon()">
                 </div>
 
             </form>
@@ -46,7 +47,6 @@
     <div class="bd">
         <ul>
             <li style="background:url(images/loginbg.jpg) #CCE1F3 center 0 no-repeat;"></li>
-
         </ul>
     </div>
 
