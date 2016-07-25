@@ -3,8 +3,8 @@
 var engineer = angular.module('engineer', []);
 engineer.controller("loginCtrl", [ "$scope", "$http", function($scope, $http) {
 	var vm = $scope.vm = {
-		logname : "123",
-		pwd : "111"
+		logname : "1",
+		pwd : "12"
 	};
 	vm.logon = function() {// 这个是前台的异步访问
 //		$http.post('loginServlet').data({

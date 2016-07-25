@@ -16,6 +16,6 @@ public class UserDaoImpl implements UserDao{
 		}catch (Exception e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);
-		}
+		} //修改代码
 	}
 }
