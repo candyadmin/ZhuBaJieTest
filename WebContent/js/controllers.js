@@ -9,7 +9,7 @@ engineer.controller("loginCtrl", ["$scope", "server", function ($scope, server) 
     vm.logon = function () {
         server.login(vm.logname, vm.pwd).success(function (result) {
             if (result.Status == 1)
-                alert("µÇÂ¼³É¹¦£¡");
+                alert("ç™»å½•æˆåŠŸï¼");
             else
                 alert(result.ErrMsg);
         })
@@ -25,7 +25,7 @@ engineer.controller("registerCtrl", ["$scope", "server", function ($scope, serve
     vm.reg = function () {
         server.register(vm.logname, vm.pwd, 1).success(function (result) {
             if (result.Status == 1)
-                alert("×¢²á³É¹¦£¡");
+                alert("æ³¨å†ŒæˆåŠŸï¼");
             else
                 alert(result.ErrMsg);
         })
@@ -55,7 +55,7 @@ engineer.controller("projectPubCtrl", ["$scope", "server", function ($scope, ser
 
     vm.addTask = function () {
         if (vm.taskClass.TaskName == null) {
-            alert("ÇëÑ¡ÔñÈÎÎñÀàĞÍ£¡");
+            alert("è¯·é€‰æ‹©ä»»åŠ¡ç±»å‹ï¼");
             return;
         }
         var task = { ID: vm.taskClass.ID, TaskName: vm.taskClass.TaskName, TaskRate: vm.taskMoney };
