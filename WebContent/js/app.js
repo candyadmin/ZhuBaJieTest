@@ -1,7 +1,7 @@
 /// <reference path="../framework/angular/angular.js" />
 'use strict';
 
-var engineerApp = angular.module('engineerApp', ['ui.router', 'engineer']);
+var engineerApp = angular.module('engineerApp', ['ui.router', 'ngAnimate', 'ngSanitize', 'mgcrea.ngStrap', 'engineer']);
 engineerApp.run(function($rootScope,$state,$stateParams){
     $rootScope.$state=$state;
     $rootScope.$stateParams=$stateParams;
@@ -19,16 +19,16 @@ engineerApp.config(function($stateProvider,$urlRouterProvider){
 	    		    templateUrl: 'views/home.html',
 	    		},
 	    		'top@home':{
-	    		    templateUrl: 'layout/top.html'
+	    		    templateUrl: 'views/layout/top.html'
 	    		},
 	    		'search@home':{
-	    		    templateUrl: 'layout/search.html'
+	    		    templateUrl: 'views/layout/search.html'
 	    		},
 	    		'main@home':{
 	    		    templateUrl: 'views/default.html'
 	    		},
 	    		'foot@home':{
-	    		    templateUrl: 'layout/foot.html'
+	    		    templateUrl: 'views/layout/foot.html'
 	    		}
 	    	}
 	    })
@@ -55,7 +55,7 @@ engineerApp.config(function($stateProvider,$urlRouterProvider){
             url: '/projectPub',
             views: {
                 'main@home': {
-                    templateUrl: 'views/ProjectPub.html',
+                    templateUrl: 'views/project/ProjectPub.html',
                     controller: 'projectPubCtrl'
                 }
             }

@@ -81,6 +81,12 @@ angular.module("engineerApp").service("server", ["$http", function ($http) {
         return $http.get("/data/projectlist.json");
     }
     
+    /**
+     * 获取项目任务
+     */
+    api.getTaskList = function () {
+        return $http.get("/data/tasklist.json");
+    }
     return api;
 
 }]);
