@@ -28,14 +28,14 @@
     <url-pattern>/*</url-pattern>
   </filter-mapping>
   <filter>
-			<description>权限过滤器</description>
-			<filter-name>PrivilegeFilter</filter-name>
-			<filter-class>filter.PrivilegeFilter</filter-class>
-		</filter>
-		<filter-mapping>
-			<filter-name>PrivilegeFilter</filter-name>
-			<url-pattern>/*</url-pattern>
-		</filter-mapping>
+    <description>权限过滤器</description>
+    <filter-name>PrivilegeFilter</filter-name>
+    <filter-class>filter.PrivilegeFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>PrivilegeFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
   <servlet>
     <description></description>
     <display-name>loginServlet</display-name>
@@ -55,5 +55,15 @@
   <servlet-mapping>
     <servlet-name>logoutServlet</servlet-name>
     <url-pattern>/logoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SubPro</display-name>
+    <servlet-name>SubPro</servlet-name>
+    <servlet-class>web.SubPro</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SubPro</servlet-name>
+    <url-pattern>/SubPro</url-pattern>
   </servlet-mapping>
 </web-app>

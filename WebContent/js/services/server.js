@@ -1,6 +1,5 @@
 ﻿/// <reference path="../framework/angular/angular.js" />
 'use strict';
-
 angular.module("engineerApp").service("server", ["$http", function ($http) {
     var api = {};
     /**
@@ -51,7 +50,7 @@ angular.module("engineerApp").service("server", ["$http", function ($http) {
      * @returns
      */
     api.addProject = function (datas) {
-        return $http.post("", {
+        return $http.post("SubPro", {
             datas:datas
         });
     }
