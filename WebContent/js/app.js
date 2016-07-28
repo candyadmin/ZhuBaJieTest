@@ -71,4 +71,14 @@ engineerApp.config(function($stateProvider,$urlRouterProvider){
             }
         })
 
+        .state('home/projectList', {
+            url: 'projectList',
+            views: {
+                'main@home': {
+                    templateUrl: 'views/project/projectList.html',
+                    controller:'projectListCtrl'
+                }
+            }
+        })
+
 });

@@ -9,7 +9,7 @@ engineer.controller("loginCtrl", ["$scope", "server", function ($scope, server) 
     vm.logon = function () {
         server.login(vm.logname, vm.pwd).success(function (result) {
             if (result.Status == 1)
-                alert("ç™»å½•æˆåŠŸï¼");
+                alert("µÇÂ¼³É¹¦£¡");
             else
                 alert(result.ErrMsg);
         })
@@ -25,7 +25,7 @@ engineer.controller("registerCtrl", ["$scope", "server", function ($scope, serve
     vm.reg = function () {
         server.register(vm.logname, vm.pwd, 1).success(function (result) {
             if (result.Status == 1)
-                alert("æ³¨å†ŒæˆåŠŸï¼");
+                alert("×¢²á³É¹¦£¡");
             else
                 alert(result.ErrMsg);
         })
@@ -55,7 +55,7 @@ engineer.controller("projectPubCtrl", ["$scope", "server", function ($scope, ser
 
     vm.addTask = function () {
         if (vm.taskClass.TaskName == null) {
-            alert("è¯·é€‰æ‹©ä»»åŠ¡ç±»å‹ï¼");
+            alert("ÇëÑ¡ÔñÈÎÎñÀàĞÍ£¡");
             return;
         }
         var task = { ID: vm.taskClass.ID, TaskName: vm.taskClass.TaskName, TaskRate: vm.taskMoney };
@@ -71,10 +71,10 @@ engineer.controller("projectPubCtrl", ["$scope", "server", function ($scope, ser
 
     vm.addProject = function () {
         //console.log(vm.pinfo);
-        server.addProject(vm.pinfo).success(function (result) {
+        server.addProject(vm.pinfo).success(function (result) {//Ìí¼ÓÏîÄ¿
             if (reslut.Status == 1) {
                 vm.pinfo = {};
-                server.addTasks(result.ID, vm.taskDatas).success(function (res) {
+                server.addTasks(result.ID, vm.taskDatas).success(function (res) {//Ìí¼Ó¸ÃÏîÄ¿µÄÈÎÎñ
                     if (res.Staus == 1) {
                         vm.taskDatas = {};
                     } else {

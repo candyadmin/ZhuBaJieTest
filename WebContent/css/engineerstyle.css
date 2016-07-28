@@ -173,3 +173,11 @@
 #tform select {
     width:300px;
 }
+
+.panelbg .listleft,.listright
+.listleft {
+    background-color:#fff;
+    float:left;
+}
+.listright {
+}
