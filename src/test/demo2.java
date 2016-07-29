@@ -1,5 +1,7 @@
 package test;
 
+import java.util.Date;
+
 import org.junit.Test;
 
 import domain.User;
@@ -19,4 +21,16 @@ public class demo2 {
 		JSONObject jsonObject = new JSONObject();
 		System.out.println(jsonObject.fromObject(user).toString());
 	}
+	@Test
+	public void demo2(){
+		new Date(1);
+	}
+	
+}
+class person {
+	public person(){
+		System.out.println("pok");
+		
+	}
+	
 }

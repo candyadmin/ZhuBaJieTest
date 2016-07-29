@@ -11,24 +11,30 @@ public class jsonToValue {
 	 * @throws Exception 
 	 * 
 	 * */
-	//{datas:{a,a}}
-	public static String jsonToJsonValue(HttpServletRequest request,String name) {
+	//{"datas":{"ProjectName":"1","Area":"1","ExpectWorkTime":"1","Location":"1","ProjectRate":"1","Summary":"1","OtherRequire":"1"}}
+	public static InputStream inputStream = null;
+	private static JSONObject obj;
+	public static void setinput(HttpServletRequest request){
 		try {
+			inputStream = request.getInputStream();
 			String stringdatas="";
-			InputStream inputStream = request.getInputStream();
 			byte[] bs = new byte[1024];
 			int i = 0;
 			while ((i = inputStream.read(bs)) != -1) {
 				stringdatas = new String(bs, 0, i);
 			}
 			inputStream.close();
-			JSONObject json = new JSONObject(stringdatas);
-			System.out.println(json.get("datas"));
-			JSONObject obj = new JSONObject(stringdatas);  
-			return (String) obj.getJSONObject("datas").get(name);
+			obj = new JSONObject(stringdatas);  
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public static String jsonToJsonValue(String name) {
+		try {
+				return (String) obj.getJSONObject("datas").get(name);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
 	}
-	
 }

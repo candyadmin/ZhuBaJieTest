@@ -72,7 +72,9 @@ engineer.controller("projectPubCtrl", ["$scope", "server", function ($scope, ser
     vm.addProject = function () {
         //console.log(vm.pinfo);
         server.addProject(vm.pinfo).success(function (result) {//添加项目
-            if (reslut.Status == 1) {
+        	alert(result);
+            if (result.status == 1) {
+            	alert("tishi");
                 vm.pinfo = {};
                 server.addTasks(result.ID, vm.taskDatas).success(function (res) {//添加该项目的任务
                     if (res.Staus == 1) {
