@@ -79,7 +79,7 @@ engineer.controller("projectPubCtrl", ["$scope", "server", function ($scope, ser
                 server.addTasks(result.ID, vm.taskDatas).success(function (res) {//添加该项目的任务
                     if (res.Staus == 1) {
                         vm.taskDatas = {};
-                    } else {
+                    } else { 
                         alert(res.ErrMsg);
                     }
                 })
